@@ -14,8 +14,10 @@ root.resizable(width=False, height=False)
 root.configure(background="white")
 
 # Создание заголовка
-header = tk.Label(root, text="Файловый менеджер", font=("Arial", 20, "bold"), bg="white", fg="blue")
+header = tk.Label(root, text="Файловый менеджер", font=("Cambria", 20, "bold"), bg="white", fg="black")
 header.pack()
+help = tk.Label(root, text = "Для выполнения действия нажмите соответствующую кнопку", font=("Arial", 10), bg="white", fg="black")
+help.pack()
 
 # Создание кнопок
 copy_image = tk.PhotoImage(file = "copy.png")
@@ -30,12 +32,25 @@ date_image = tk.PhotoImage(file = "date.png")
 date_button = tk.Button(root, image = date_image, width = 64, height = 64)
 
 # Размещение кнопок в окне
-copy_button.pack(pady=5)
-delete_button.pack(pady=5)
-find_button.pack(pady=5)
-count_button.pack(pady=5)
-date_button.pack(pady=5)
+copy_button.place(x = 20, y = 100)
+delete_button.place(x = 20, y = 200)
+find_button.place(x = 20, y = 300)
+count_button.place(x = 20, y = 400)
+date_button.place(x = 20, y = 500)
 
+# Создание меток
+copy_label = tk.Label(root, text = "Копирование файла", bg="white", fg="black", font=("Arial", 15))
+delete_label = tk.Label(root, text = "Удаление файлов и папок", bg="white", fg="black", font=("Arial", 15))
+find_label = tk.Label(root, text = "Поиск папки", bg="white", fg="black", font=("Arial", 15))
+count_label = tk.Label(root, text = "Подсчет количества файлов в папке", bg="white", fg="black", font=("Arial", 15))
+date_label = tk.Label(root, text = "Добавление даты к имени файла", bg="white", fg="black", font=("Arial", 15))
+
+# Размещение меток в окне
+copy_label.place(x = 100, y = 115)
+delete_label.place(x = 100, y = 215)
+find_label.place(x = 100, y = 315)
+count_label.place(x = 100, y = 415)
+date_label.place(x = 100, y = 515)
 
 # Запуск основного цикла обработки событий
 root.mainloop()
