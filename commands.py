@@ -4,8 +4,9 @@ import shutil
 import os
 import datetime
 
+
 def copy_file():
-    """Копирует выбранный файл в указанную папку."""
+    # Копирует выбранный файл в указанную папку
     file_path = filedialog.askopenfilename(title="Выберите файл для копирования")
     if not file_path:
         return
@@ -17,6 +18,7 @@ def copy_file():
         messagebox.showinfo("Успех", "Файл успешно скопирован!")
     except Exception as e:
         messagebox.showerror("Ошибка", f"Не удалось скопировать файл: {e}")
+
 
 def delete_file():
     """Удаляет выбранный файл или папку."""
@@ -33,6 +35,7 @@ def delete_file():
         messagebox.showinfo("Успех", "Файл/папка успешно удалены!")
     except Exception as e:
         messagebox.showerror("Ошибка", f"Не удалось удалить файл/папку: {e}")
+
 
 def find_folder():
     """Ищет папку внутри выбранной директории."""
@@ -51,6 +54,7 @@ def find_folder():
 
     messagebox.showerror("Ошибка", "Папка не найдена")
 
+
 def count_files():
     """Подсчитывает количество файлов внутри выбранной папки (включая подпапки)."""
     folder_path = filedialog.askdirectory(title="Выберите папку для подсчета файлов")
@@ -62,6 +66,7 @@ def count_files():
         count += len(files)
 
     messagebox.showinfo("Результат", f"Количество файлов: {count}")
+
 
 def add_date():
     """Добавляет текущую дату к имени файла или ко всем файлам в папке."""
@@ -86,4 +91,3 @@ def add_date():
                 new_path = os.path.join(file_or_folder, f"{os.path.basename(name)}_{date_str}{ext}")
                 os.rename(filepath, new_path)
         messagebox.showinfo("Успех", "Имена файлов в папке обновлены")
-
