@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c87f9943-496b-4b90-9002-dabe3cf518e2" name="Changes" comment="Создание файла commands.py с функциями для выполнения команд">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="c87f9943-496b-4b90-9002-dabe3cf518e2" name="Changes" comment="Добавление двух кнопок (для работы с папками)">
       <change beforePath="$PROJECT_DIR$/commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/commands.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui_manager.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764609111352</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Добавление двух кнопок (для работы с папками)">
+      <option name="closed" value="true" />
+      <created>1764679991251</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1764679991251</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -153,6 +159,7 @@
     <MESSAGE value="Создание графических кнопок" />
     <MESSAGE value="Создание подписей к кнопкам" />
     <MESSAGE value="Создание файла commands.py с функциями для выполнения команд" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создание файла commands.py с функциями для выполнения команд" />
+    <MESSAGE value="Добавление двух кнопок (для работы с папками)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавление двух кнопок (для работы с папками)" />
   </component>
 </project>

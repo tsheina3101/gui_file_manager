@@ -21,21 +21,27 @@ def copy_file():
 
 
 def delete_file():
-    """Удаляет выбранный файл или папку."""
-    path_to_delete = filedialog.askopenfilename(title="Выберите файл или папку для удаления")
-    if not path_to_delete:
-        path_to_delete = filedialog.askdirectory(title="Выберите файл или папку для удаления")
+    # Удаляет выбранный файл
+    path_to_delete = filedialog.askopenfilename(title="Выберите файл для удаления")
     if not path_to_delete:
         return
     try:
         if os.path.isfile(path_to_delete):
             os.remove(path_to_delete)
-        else:
-            shutil.rmtree(path_to_delete)
-        messagebox.showinfo("Успех", "Файл/папка успешно удалены!")
+        messagebox.showinfo("Успех", "Файл успешно удален!")
     except Exception as e:
-        messagebox.showerror("Ошибка", f"Не удалось удалить файл/папку: {e}")
+        messagebox.showerror("Ошибка", f"Не удалось удалить файл: {e}")
 
+def delete_folder():
+    # Удаляет выбранную папку
+    path_to_delete = filedialog.askdirectory(title="Выберите папку для удаления")
+    if not path_to_delete:
+        return
+    try:
+        shutil.rmtree(path_to_delete)
+        messagebox.showinfo("Успех", "Папка успешно удалена!")
+    except Exception as e:
+        messagebox.showerror("Ошибка", f"Не удалось удалить папку: {e}")
 
 def find_folder():
     """Ищет папку внутри выбранной директории."""
