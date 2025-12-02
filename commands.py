@@ -44,7 +44,7 @@ def delete_folder():
         messagebox.showerror("Ошибка", f"Не удалось удалить папку: {e}")
 
 def find_folder():
-    """Ищет папку внутри выбранной директории."""
+    # Ищет папку внутри выбранной директории
     folder_name = tk.simpledialog.askstring("Поиск папки", "Введите имя папки для поиска:")
     if not folder_name:
         return
@@ -62,7 +62,7 @@ def find_folder():
 
 
 def count_files():
-    """Подсчитывает количество файлов внутри выбранной папки (включая подпапки)."""
+    # Подсчитывает количество файлов внутри выбранной папки (включая подпапки)
     folder_path = filedialog.askdirectory(title="Выберите папку для подсчета файлов")
     if not folder_path:
         return
@@ -75,10 +75,8 @@ def count_files():
 
 
 def add_date():
-    """Добавляет текущую дату к имени файла или ко всем файлам в папке."""
+    # Добавляет текущую дату к имени файла
     file_or_folder = filedialog.askopenfilename(title="Выберите файл для переименования")
-    if not file_or_folder:
-        file_or_folder = filedialog.askdirectory(title="Выберите папку")
     if not file_or_folder:
         return
     date_str = datetime.date.today().strftime("%Y%m%d")
@@ -88,12 +86,19 @@ def add_date():
         new_name = f"{name}_{date_str}{ext}"
         os.rename(file_or_folder, new_name)
         messagebox.showinfo("Успех", f"Файл переименован в {new_name}")
-    else:
-        for filename in os.listdir(file_or_folder):
-            filepath = os.path.join(file_or_folder, filename)
-            if os.path.isfile(filepath):
-                name, ext = os.path.splitext(filepath)
-                new_name = f"{name}_{date_str}{ext}"
-                new_path = os.path.join(file_or_folder, f"{os.path.basename(name)}_{date_str}{ext}")
-                os.rename(filepath, new_path)
-        messagebox.showinfo("Успех", "Имена файлов в папке обновлены")
+
+def add_folder_date():
+    # Добавляет текущую дату ко всем файлам в папке
+    file_or_folder = filedialog.askdirectory(title="Выберите папку")
+    if not file_or_folder:
+        return
+    date_str = datetime.date.today().strftime("%Y%m%d")
+
+    for filename in os.listdir(file_or_folder):
+        filepath = os.path.join(file_or_folder, filename)
+        if os.path.isfile(filepath):
+           name, ext = os.path.splitext(filepath)
+           new_name = f"{name}_{date_str}{ext}"
+           new_path = os.path.join(file_or_folder, f"{os.path.basename(name)}_{date_str}{ext}")
+           os.rename(filepath, new_path)
+    messagebox.showinfo("Успех", "Имена файлов в папке обновлены")

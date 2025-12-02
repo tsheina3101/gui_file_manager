@@ -4,7 +4,7 @@ import shutil
 import os
 import datetime
 import commands
-from commands import copy_file, delete_file, find_folder, count_files, add_date, delete_folder
+from commands import copy_file, delete_file, find_folder, count_files, add_date, delete_folder, add_folder_date
 
 #import commands
 
@@ -35,7 +35,7 @@ count_button = tk.Button(root, image=count_image, width=64, height=64, command=c
 date_image = tk.PhotoImage(file="date.png")
 date_button = tk.Button(root, image=date_image, width=64, height=64, command=add_date)
 date_folder_image = tk.PhotoImage(file="date_folder.png")
-date_folder_button = tk.Button(root, image=date_folder_image, width=64, height=64)
+date_folder_button = tk.Button(root, image=date_folder_image, width=64, height=64, command=add_folder_date)
 
 # Размещение кнопок в окне
 copy_button.place(x=20, y=100)

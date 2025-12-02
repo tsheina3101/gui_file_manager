@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c87f9943-496b-4b90-9002-dabe3cf518e2" name="Changes" comment="Добавление двух кнопок (для работы с папками)">
+    <list default="true" id="c87f9943-496b-4b90-9002-dabe3cf518e2" name="Changes" comment="Разделение функции удаления файлов и папок на две отдельные функции">
       <change beforePath="$PROJECT_DIR$/commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/commands.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui_manager.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +129,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764679991251</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Разделение функции удаления файлов и папок на две отдельные функции">
+      <option name="closed" value="true" />
+      <created>1764680336630</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1764680336630</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -160,6 +169,7 @@
     <MESSAGE value="Создание подписей к кнопкам" />
     <MESSAGE value="Создание файла commands.py с функциями для выполнения команд" />
     <MESSAGE value="Добавление двух кнопок (для работы с папками)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавление двух кнопок (для работы с папками)" />
+    <MESSAGE value="Разделение функции удаления файлов и папок на две отдельные функции" />
+    <option name="LAST_COMMIT_MESSAGE" value="Разделение функции удаления файлов и папок на две отдельные функции" />
   </component>
 </project>
