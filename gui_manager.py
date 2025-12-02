@@ -6,7 +6,7 @@ import datetime
 import commands
 from commands import copy_file, delete_file, find_folder, count_files, add_date, delete_folder, add_folder_date
 
-#import commands
+# import commands
 
 # Создание основного окна
 root = tk.Tk()
@@ -18,7 +18,8 @@ root.configure(background="white")
 # Создание заголовка
 header = tk.Label(root, text="Файловый менеджер", font=("Cambria", 20, "bold"), bg="white", fg="black")
 header.pack()
-help = tk.Label(root, text = "Для выполнения действия нажмите соответствующую кнопку", font=("Arial", 10), bg="white", fg="black")
+help = tk.Label(root, text="Для выполнения действия нажмите соответствующую кнопку", font=("Arial", 10), bg="white",
+                fg="black")
 help.pack()
 
 # Создание кнопок
@@ -53,7 +54,8 @@ delete_folder_label = tk.Label(root, text="Удаление папок", bg="whi
 find_label = tk.Label(root, text="Поиск папки", bg="white", fg="black", font=("Arial", 15))
 count_label = tk.Label(root, text="Подсчет количества файлов в папке", bg="white", fg="black", font=("Arial", 15))
 date_label = tk.Label(root, text="Добавление даты к имени файла", bg="white", fg="black", font=("Arial", 15))
-date_folder_label = tk.Label(root, text="Добавление даты к именам всех файлов папки", bg="white", fg="black", font=("Arial", 15))
+date_folder_label = tk.Label(root, text="Добавление даты к именам всех файлов папки", bg="white", fg="black",
+                             font=("Arial", 15))
 
 # Размещение меток в окне
 copy_label.place(x=100, y=115)

@@ -32,6 +32,7 @@ def delete_file():
     except Exception as e:
         messagebox.showerror("Ошибка", f"Не удалось удалить файл: {e}")
 
+
 def delete_folder():
     # Удаляет выбранную папку
     path_to_delete = filedialog.askdirectory(title="Выберите папку для удаления")
@@ -42,6 +43,7 @@ def delete_folder():
         messagebox.showinfo("Успех", "Папка успешно удалена!")
     except Exception as e:
         messagebox.showerror("Ошибка", f"Не удалось удалить папку: {e}")
+
 
 def find_folder():
     # Ищет папку внутри выбранной директории
@@ -87,6 +89,7 @@ def add_date():
         os.rename(file_or_folder, new_name)
         messagebox.showinfo("Успех", f"Файл переименован в {new_name}")
 
+
 def add_folder_date():
     # Добавляет текущую дату ко всем файлам в папке
     file_or_folder = filedialog.askdirectory(title="Выберите папку")
@@ -97,8 +100,8 @@ def add_folder_date():
     for filename in os.listdir(file_or_folder):
         filepath = os.path.join(file_or_folder, filename)
         if os.path.isfile(filepath):
-           name, ext = os.path.splitext(filepath)
-           new_name = f"{name}_{date_str}{ext}"
-           new_path = os.path.join(file_or_folder, f"{os.path.basename(name)}_{date_str}{ext}")
-           os.rename(filepath, new_path)
+            name, ext = os.path.splitext(filepath)
+            new_name = f"{name}_{date_str}{ext}"
+            new_path = os.path.join(file_or_folder, f"{os.path.basename(name)}_{date_str}{ext}")
+            os.rename(filepath, new_path)
     messagebox.showinfo("Успех", "Имена файлов в папке обновлены")
