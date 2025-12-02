@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import filedialog, messagebox
+from tkinter import filedialog, messagebox, simpledialog
 import shutil
 import os
 import datetime
@@ -54,7 +54,7 @@ def find_folder():
 
     for root, dirs, files in os.walk(search_path):
         if folder_name in dirs:
-            folder_path = os.path.join(root, folder_name)
+            folder_path = root + "/" + folder_name
             messagebox.showinfo("Результат поиска", f"Папка найдена: {folder_path}")
             return
 
